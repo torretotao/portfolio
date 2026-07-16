@@ -41,15 +41,9 @@ header{
 
 .navbar{
     display:flex;
-    justify-content:space-between;
+    justify-content:flex-end;
     align-items:center;
     padding:20px 10%;
-}
-
-.logo{
-    font-size:1.8rem;
-    font-weight:700;
-    color:#38bdf8;
 }
 
 .nav-links{
@@ -276,16 +270,6 @@ footer{
     text-align:center;
 }
 
-.navbar{
-    flex-direction:column;
-    gap:20px;
-}
-
-.nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
 .hero-text h1{
     font-size:3rem;
 }
@@ -304,6 +288,146 @@ footer{
 
 .hero-image img{
     width:280px;
+}
+
+}
+
+.hamburger{
+    display:none;
+    width:35px;
+    height:28px;
+    cursor:pointer;
+    position:relative;
+}
+
+.hamburger span{
+    position:absolute;
+    width:100%;
+    height:4px;
+    background:white;
+    border-radius:4px;
+    transition:.3s;
+}
+
+.hamburger span:nth-child(1){
+    top:0;
+}
+
+.hamburger span:nth-child(2){
+    top:12px;
+}
+
+.hamburger span:nth-child(3){
+    top:24px;
+}
+
+.hamburger.active span:nth-child(1){
+    transform:rotate(45deg);
+    top:12px;
+}
+
+.hamburger.active span:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform:rotate(-45deg);
+    top:12px;
+}
+
+#topBtn{
+
+    display:none;
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    border:none;
+
+    outline:none;
+
+    background:#38bdf8;
+
+    color:white;
+
+    cursor:pointer;
+
+    padding:15px 20px;
+
+    border-radius:50%;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+#topBtn:hover{
+
+    transform:scale(1.1);
+
+}
+
+@media (max-width:768px){
+
+.navbar{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:15px 25px;
+}
+
+.hamburger{
+    display:block;
+    font-size:32px;
+    cursor:pointer;
+}
+
+.nav-links{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    text-align:center;
+    margin-top:15px;
+    gap:15px;
+}
+
+.nav-links.show{
+    display:flex;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-text p{
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.about-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:2.4rem;
+}
+
+.hero-image img{
+    width:280px;
+}
+
+.section-title{
+    font-size:2rem;
 }
 
 }
